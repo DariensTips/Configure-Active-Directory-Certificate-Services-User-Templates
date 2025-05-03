@@ -9,4 +9,4 @@ Get-ADUser [username] -properties usercertificate
 
 $scriptPath=[scriptpath]
 $myCertInfo=dir Cert:\CurrentUser\my\[thumbnail]
-Set-AuthenticodeSignature -FilePath $scriptPath -Certificate $myCertInfo
+Set-AuthenticodeSignature -FilePath $scriptPath -Certificate $myCertInfo -TimestampServer [serverURL]
